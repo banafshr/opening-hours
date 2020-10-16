@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && http-server build -p 3000",
+    "lint": "eslint src --ext .ts,.tsx",
     "test": "cross-env CI=true react-scripts test",
     "eject": "react-scripts eject",
     "serve": "http-server build -p 3000"

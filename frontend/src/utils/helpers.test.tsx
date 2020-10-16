@@ -1,11 +1,11 @@
-import {capitalize, parseSeconds, convertToAMPM} from "./helpers"
+import {capitalize, parseSeconds, convertToAMPM} from './helpers'
 
 
-it("should capitalize the text correctly", () => {
-  const text = "test case"
-  const capitalizedText = "Test case"
-  expect(capitalize(text)).toBe("Test case")
-  expect(capitalize(capitalizedText)).toBe("Test case")
+it('should capitalize the text correctly', () => {
+  const text = 'test case'
+  const capitalizedText = 'Test case'
+  expect(capitalize(text)).toBe('Test case')
+  expect(capitalize(capitalizedText)).toBe('Test case')
 
 })
 
