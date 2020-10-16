@@ -9,10 +9,13 @@ import {
   convertToAMPM
 } from 'utils/helpers';
 
+const { hostname } = window.location
+const API_BASE_URL = `http://${hostname}:3001`
+
 const createEmptyOpeningHours = () => {
   const day = () => ({
-    label: <SkeletonText length={16} />,
-    hours: <SkeletonText length={7} />
+    label: <SkeletonText length={140} />,
+    hours: <SkeletonText length={100} />
   });
 
   return [...Array(7).keys()].map(day);
@@ -23,7 +26,7 @@ const OpeningHours = () => {
 
   useEffect(() => {
     if (openingHours.length === 0 && error === false) {
-      fetchOpeningHours('http://localhost:3001/openingHours');
+      fetchOpeningHours(`${API_BASE_URL}/openingHours`);
     }
   }, [openingHours, error, fetchOpeningHours]);
 

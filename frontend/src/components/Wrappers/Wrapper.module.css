@@ -5,7 +5,12 @@
   align-items: center;
 }
 
+.container {
+  height: 20px
+}
+
 .text {
+  display: flex;
   white-space: pre;
   background: var(--color-grey-1);
   border-radius: 3px;

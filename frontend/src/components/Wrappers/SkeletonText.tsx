@@ -1,13 +1,12 @@
-import React from 'react'
-import css from './Wrapper.module.css'
+import React from 'react';
+import css from './Wrapper.module.css';
 
 const SkeletonText = ({ length = 10, ...props }): React.ReactElement => {
-  const content = (' ').repeat(length)
   return (
-    <span className={css.text} {...props}>
-      {content}
+    <span className={css.text} style={{ width: length + 'px' }} {...props}>
+      <span className={css.container} />
     </span>
-  )
-}
+  );
+};
 
-export default SkeletonText
+export default SkeletonText;
