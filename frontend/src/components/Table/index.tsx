@@ -8,7 +8,7 @@ import * as types from './types';
 
 const RenderTable = ({ days }: types.Days) => {
   return (
-    <div className={css.table}>
+    <div className={css.table} data-testid="table">
       {days.map((day, i) => (
         <div key={day.label.props.children+i} className={css.row}>
           <div className="center">
@@ -49,9 +49,9 @@ function decorateData(data: Array<any>) {
 const Table = ({ days }: types.Days) => {
   const data = decorateData(days);
   return (
-    <Box>
+    <Box data-testid="main-wrapper">
       <Header title="Opening hours" Icon={Clock} />
-      {days.length ? <RenderTable days={data} /> : null}
+      <RenderTable days={data}  />
     </Box>
   );
 };
