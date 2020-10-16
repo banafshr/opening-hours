@@ -1,0 +1,26 @@
+.h1 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.p {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.greyedOut {
+  color: var(--color-grey-3)
+}
+
+.NotificationText {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: var(--color-green)
+}

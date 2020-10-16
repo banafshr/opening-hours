@@ -1,0 +1,9 @@
+{
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    "eslint.codeAction.showDocumentation": {
+
+        "enable": true
+    },
+    "editor.tabSize": 2,
+}

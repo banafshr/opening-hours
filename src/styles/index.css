@@ -1,0 +1,9 @@
+@import "./fonts.css";
+@import "./colors.css";
+@import "./flex.css";
+
+body {
+    font: normal 16px/1.5 "Roboto", sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-grey-2);
+}
