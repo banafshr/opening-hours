@@ -18,7 +18,6 @@ export const convertToAMPM= ({ hours, minutes }: TimeProps): string => {
 
 export const isToday = (dayIndex:number): boolean => {
   const today = new Date().getDay()
-  console.log({today, dayIndex})
   return dayIndex+1 === today
 }
 

@@ -9,8 +9,8 @@ import * as types from './types';
 const RenderTable = ({ days }: types.Days) => {
   return (
     <div className={css.table}>
-      {days.map((day) => (
-        <div key={day.label} className={css.row}>
+      {days.map((day, i) => (
+        <div key={day.label.props.children+i} className={css.row}>
           <div className="center">
             {day.label} {day.labelDecorator}
           </div>
