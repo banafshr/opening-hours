@@ -20,11 +20,11 @@ export const fetchInit = (payload: Array<any>): FetchInit => ({
   type: types.FETCH_INIT,
   payload
 });
-export const fetchSucess = (payload: Array<types.openingHoursSchema>): FetchSuccess => 
-({
-  payload,
-  type: types.FETCH_SUCCESS,
-});
+export const fetchSucess = (payload: Array<types.openingHoursSchema>): FetchSuccess =>
+  ({
+    payload,
+    type: types.FETCH_SUCCESS,
+  });
 export const fetchError = (payload: Array<object>): FetchError => ({
   type: types.FETCH_ERROR,
   payload,

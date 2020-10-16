@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { H1, Text, NotificationText } from './index';
 
-describe("<H1 />", () => {
+describe('<H1 />', () => {
   it('renders children', () => {
     const { getByTestId } = render(
       <H1>
@@ -13,7 +13,7 @@ describe("<H1 />", () => {
   });
 })
 
-describe("<Text />", () => {
+describe('<Text />', () => {
   it('renders children', () => {
     const { getByTestId } = render(
       <Text>
@@ -23,17 +23,17 @@ describe("<Text />", () => {
     expect(getByTestId('child')).toBeInTheDocument();
   });
 
-  it("gets bold props", () => {
+  it('gets bold props', () => {
     const { container } = render(
       <Text bold>
         <span data-testid="child" />
       </Text>
     );
-    expect(container.firstChild).toHaveClass("bold")
+    expect(container.firstChild).toHaveClass('bold')
   })
 })
 
-describe("<NotificationText />", () => {
+describe('<NotificationText />', () => {
   it('renders children', () => {
     const { getByTestId } = render(
       <NotificationText>
@@ -43,12 +43,12 @@ describe("<NotificationText />", () => {
     expect(getByTestId('child')).toBeInTheDocument();
   });
 
-  it("is green", () => {
+  it('is green', () => {
     const { container } = render(
       <NotificationText>
         Test
       </NotificationText>
     );
-    expect(container.firstChild).toHaveStyle(`color:var(--color-green)`)
+    expect(container.firstChild).toHaveStyle('color:var(--color-green)')
   })
 })

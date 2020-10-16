@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import useDataLoader from 'hooks/useDataLoader';
 import Table from 'components/Table';
-import {Center, SkeletonText} from "components/Wrapper"
+import {Center, SkeletonText} from 'components/Wrapper'
 import {
   capitalize,
   isToday,

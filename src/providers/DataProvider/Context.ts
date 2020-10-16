@@ -9,7 +9,7 @@ interface IContextProps {
 
 const Context = createContext<IContextProps>({
   dispatch: () => {},
-   state: initialState
-  });
+  state: initialState
+});
 
 export default Context

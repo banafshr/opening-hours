@@ -7,7 +7,7 @@ interface toTwelveHourClockProps {
   minutes: number;
 }
 export const toTwelveHourClock = ({ hours, minutes }: toTwelveHourClockProps) => {
-  const time = [hours % 12 || "12"];
+  const time = [hours % 12 || '12'];
   if (minutes > 0) {
     time.push(`0${minutes}`.slice(-2));
   }
