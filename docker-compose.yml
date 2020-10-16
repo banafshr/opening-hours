@@ -1,0 +1,18 @@
+version: "3.4"
+services:
+  backend:
+    build: ./api
+    container_name: api
+
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/app
+  
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
