@@ -1,22 +1,22 @@
 import React, { useEffect } from 'react';
 import useDataLoader from 'hooks/useDataLoader';
 import Table from 'components/Table';
-import {Center, SkeletonText} from 'components/Wrapper'
+import { Center, SkeletonText } from 'components/Wrappers';
 import {
   capitalize,
   isToday,
   parseSeconds,
-  toTwelveHourClock
+  convertToAMPM
 } from 'utils/helpers';
 
 const createEmptyOpeningHours = () => {
   const day = () => ({
     label: <SkeletonText length={16} />,
     hours: <SkeletonText length={7} />
-  })
+  });
 
-  return [...Array(7).keys()].map(day)
-}
+  return [...Array(7).keys()].map(day);
+};
 
 const OpeningHours = () => {
   const [{ openingHours, error }, fetchOpeningHours] = useDataLoader();
@@ -29,7 +29,7 @@ const OpeningHours = () => {
 
   const formattedOpeningHours = openingHours.map((day, index) => {
     const values = day.openingHours.map((seconds: Array<any>) => {
-      return seconds.map(parseSeconds).map(toTwelveHourClock).join(' - ');
+      return seconds.map(parseSeconds).map(convertToAMPM).join(' - ');
     });
     const isClosed = values.length ? false : true;
     const labelDecorator = isToday(index) ? true : false;
