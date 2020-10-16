@@ -27,7 +27,7 @@ function decorateData(data: Array<any>) {
     const props: { [k: string]: any } = {};
     if (row.labelDecorator) {
       props.labelDecorator = (
-        <NotificationText className={css.notification} bold>
+        <NotificationText className={css.notification}>
           TODAY
         </NotificationText>
       );

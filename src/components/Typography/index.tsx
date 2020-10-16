@@ -1,8 +1,12 @@
 import React from 'react';
-import { H1Props } from './types';
+import { TextProps } from './types';
 import css from './Typography.module.css';
 
-export const H1 = ({ children, className = '', ...rest }: H1Props) => {
+export const H1 = ({
+  children,
+  className = '',
+  ...rest
+}: TextProps): React.ReactElement => {
   const classNames = [css.h1, className];
   return (
     <h1 className={classNames.join(' ')} {...rest}>
@@ -17,7 +21,7 @@ export const Text = ({
   bold,
   greyedOut,
   ...rest
-}: H1Props) => {
+}: TextProps): React.ReactElement => {
   const classNames = [css.p, className];
 
   if (bold) {
@@ -37,9 +41,8 @@ export const Text = ({
 export const NotificationText = ({
   children,
   className = '',
-  bold,
   ...rest
-}: H1Props) => {
+}: TextProps): React.ReactElement => {
   const classNames = [css.NotificationText, className];
   return (
     <span className={classNames.join(' ')} {...rest}>
