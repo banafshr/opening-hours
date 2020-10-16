@@ -1,5 +1,6 @@
+import {openingHoursSchema} from './types'
 export interface IState {
-  openingHours: Array<any>;
+  openingHours: Array<openingHoursSchema>;
   error: string | boolean | Array<any>;
   isLoading: boolean;
 }

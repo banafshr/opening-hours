@@ -1,10 +1,9 @@
-import { networkInterfaces } from 'os';
 import * as types from './types';
 
 
 export interface FetchInit {
   type: types.FETCH_INIT;
-  payload: Array<any>
+  payload: Array<types.openingHoursSchema>
 }
 export interface FetchSuccess {
   type: types.FETCH_SUCCESS;
@@ -12,11 +11,11 @@ export interface FetchSuccess {
 }
 export interface FetchError {
   type: types.FETCH_ERROR;
-  payload: Array<object>;
+  payload: Array<any>;
 }
 
 
-export const fetchInit = (payload: Array<any>): FetchInit => ({
+export const fetchInit = (payload: Array<types.openingHoursSchema>): FetchInit => ({
   type: types.FETCH_INIT,
   payload
 });
