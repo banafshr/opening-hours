@@ -7,8 +7,8 @@ interface ClockTypes {
 const Clock: FC<ClockTypes> = ({ fill,width, ...rest }) => {
   return (
     <svg
-      data-icon="clock"
       role="img"
+      aria-label="clock"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 500 500"
       width={width || '20'}
