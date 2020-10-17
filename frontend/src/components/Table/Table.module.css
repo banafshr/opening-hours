@@ -13,3 +13,18 @@
 .table {
   width: 340px;
 }
+
+.isAnimated {
+  animation-name: appear;
+  animation-duration: 2s;
+}
+
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

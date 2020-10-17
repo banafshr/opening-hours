@@ -4,3 +4,19 @@
   background-color: var(--color-white);
   box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, .1);
 }
+
+
+.wrapper.animated {
+  animation-name: up;
+  animation-duration: 1.5s;
+}
+
+
+@keyframes up {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

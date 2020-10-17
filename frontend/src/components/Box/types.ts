@@ -1,4 +1,5 @@
 export interface BoxProps {
-  children: React.ReactNode | React.ReactNode[];
+  children: React.ReactNode;
   className?: string
+  animated?: boolean
 }

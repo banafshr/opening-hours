@@ -22,7 +22,7 @@ const createEmptyOpeningHours = () => {
 };
 
 const OpeningHours = () => {
-  const [{ openingHours, error }, fetchOpeningHours] = useDataLoader();
+  const [{ openingHours, error, isLoading }, fetchOpeningHours] = useDataLoader();
 
   useEffect(() => {
     if (openingHours.length === 0 && error === false) {
@@ -50,7 +50,7 @@ const OpeningHours = () => {
 
   return (
     <Center>
-      <Table days={decoratedOpeningHours} />
+      <Table days={decoratedOpeningHours} isLoading={isLoading} />
     </Center>
   );
 };
